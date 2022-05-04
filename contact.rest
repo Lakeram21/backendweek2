@@ -5,3 +5,31 @@ Get http://localhost:8080/contacts
 // Getting a specific contact
 ###
 Get http://localhost:8080/contact626c668802cd4a48e2cd6b42
+
+//Post Method
+###
+Put http://localhost:8080/contact/id-to-modify626c663802cd4a48e2cd6b41 
+
+{
+        "firstName": "ANA",
+        "lastName": "Cardenas",
+        "favoriteColor": "Purple",
+        "email": "ana@gmail.com",
+        "birthDay": "1995-09-11T07:00:00.000Z"
+}
+
+//Delete Method
+###
+DELETE  http://localhost:8080/contact/deletecontact626c668802cd4a48e2cd6b42
+
+//Create Method
+###
+POST http://localhost:8080/contact/createcontact
+
+{
+    "firstName": "Cristina",
+    "lastName": "Cardenas",
+    "favoriteColor": "Purple",
+    "email": "ana@gmail.com",
+    "birthDay": "1995-09-11T07:00:00.000Z"
+}

@@ -24,10 +24,11 @@ DELETE  http://localhost:8080/contact/deletecontact626c668802cd4a48e2cd6b42
 
 //Create Method
 ###
-POST http://localhost:8080/contact/createcontact
+POST http://localhost:8080/contact/createcontact HTTP/1.1
+content-type: application/json
 
 {
-    "firstName": "Cristina",
+    "firstName": "Adam",
     "lastName": "Cardenas",
     "favoriteColor": "Purple",
     "email": "ana@gmail.com",

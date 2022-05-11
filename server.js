@@ -5,12 +5,14 @@ const routes = require('./routes/contacts');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger-output.json');
 const cors = require('cors');
+
 //Middlewares
 var options = {
   explorer: true
 };
 
 const app = express();
+app.use(cors());
 // app.use(cors);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 app.use(bodyparser.urlencoded({ extended: true }));

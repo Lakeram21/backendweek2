@@ -1,17 +1,15 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const mongodb = require('./db/connect');
-const routes = require('./routes/index');
+const routes = require('./routes/contacts');
 
 //Middlewares
 const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(express.json());
 
-
 app.use('/', routes);
 const port = process.env.PORT || 8080;
-
 
 // run server and make connection to the database
 mongodb.initDb((err, mongodb) => {
